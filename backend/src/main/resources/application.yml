@@ -9,6 +9,8 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
+    database-platform:
+      org.hibernate.dialect.PostgreSQLDialect      
     properties:
       hibernate:
         format_sql: true
