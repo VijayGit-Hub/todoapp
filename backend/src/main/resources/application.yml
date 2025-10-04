@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/todoapp}
-    username: ${DATABASE_USERNAME:todo}
-    password: ${DATABASE_PASSWORD:todo}
+    url: jdbc:postgresql://${PGHOST}:${PGPORT}/${PGDATABASE}
+    username: ${PGUSER}
+    password: ${PGPASSWORD}
   jpa:
     hibernate:
       ddl-auto: update
