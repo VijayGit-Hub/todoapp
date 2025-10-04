@@ -18,7 +18,7 @@ RUN ./mvnw dependency:go-offline -B
 COPY backend/src ./src
 
 # Build the application
-RUN ./mvnw clean package spring-boot:repackage -DskipTests
+RUN ./mvnw clean package -DskipTests
 
 # Expose port
 EXPOSE 8080
