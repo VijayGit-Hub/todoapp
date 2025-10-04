@@ -31,7 +31,7 @@ CORS_ORIGINS=https://your-frontend-url.railway.app
 
 1. **Create a new Railway project** for frontend
 2. **Connect the same GitHub repository**
-3. **Set Root Directory to `frontend/`**
+3. **Set Dockerfile to `Dockerfile.frontend`**
 4. **Railway will use the frontend Dockerfile**
 
 ### Update API URL
