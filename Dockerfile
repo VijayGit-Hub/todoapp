@@ -32,8 +32,6 @@
     # Copy nginx config (adjust path if nginx.conf location differs)
     COPY frontend/nginx.conf /etc/nginx/nginx.conf
 
-    # Optional: add a simple healthcheck endpoint
-    RUN echo "ok" > /usr/share/nginx/html/health.html
     
     EXPOSE 80
     CMD ["nginx", "-g", "daemon off;"]
