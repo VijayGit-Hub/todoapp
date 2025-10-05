@@ -1,5 +1,6 @@
 # ---- build stage ----
     FROM node:22-alpine AS build
+    ARG CACHE_BUSTER=1
     WORKDIR /app
     
     # Install minimal build tools if any native modules require compilation (uncomment if needed)
