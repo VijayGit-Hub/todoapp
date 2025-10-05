@@ -5,8 +5,8 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy Maven wrapper and pom.xml from backend directory
-COPY backend/.mvn/ .mvn/
-COPY backend/mvnw backend/pom.xml ./
+COPY .mvn/ .mvn/
+COPY mvnw pom.xml ./
 
 # Make Maven wrapper executable
 RUN chmod +x ./mvnw
@@ -15,10 +15,10 @@ RUN chmod +x ./mvnw
 RUN ./mvnw dependency:go-offline -B
 
 # Copy source code from backend directory
-COPY backend/src ./src
+COPY src ./src
 
 # Build the application
-RUN ./mvnw clean package -DskipTests
+RUN ./mvnw clean package spring-boot:repackage -DskipTests
 
 # Expose port
 EXPOSE 8080
