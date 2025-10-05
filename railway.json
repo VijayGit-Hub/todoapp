@@ -6,7 +6,7 @@
     },
     "deploy": {
       "startCommand": "nginx -g 'daemon off;'",
-      "healthcheckPath": "/",
+      "healthcheckPath": "/index.html",
       "healthcheckTimeout": 100,
       "restartPolicyType": "ON_FAILURE"
     }
